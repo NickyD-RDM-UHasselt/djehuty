@@ -450,9 +450,9 @@ function edit_author (author_uuid, dataset_uuid) {
         accept:      "application/json",
     }).done(function (author) {
         let html = `<tr id="author-inline-edit-form"><td colspan="3">`;
-        html += `<label for="author_first_name">First name</label>`;
+        html += `<label for="author_first_name">First name</label><span class="required-field">∗</span>`;
         html += `<input type="text" id="edit_author_first_name" name="author_first_name" value="${or_empty (author.first_name)}">`;
-        html += `<label for="author_last_name">Last name</label>`;
+        html += `<label for="author_last_name">Last name</label><span class="required-field">∗</span>`;
         html += `<input type="text" id="edit_author_last_name" name="author_last_name" value="${or_empty (author.last_name)}">`;
         html += `<label for="author_email">E-mail address</label>`;
         html += `<input type="text" id="edit_author_email" name="author_email" value="${or_empty (author.email)}">`;
